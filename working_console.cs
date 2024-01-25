@@ -52,3 +52,16 @@ Console.WriteLine("Press any key to clear the console...");
 Console.ReadKey();
 Console.Clear();
 Console.WriteLine("Console cleared!");
+
+
+string hello = "Hello world";
+Console.WriteLine(hello);
+Console.WriteLine("Welcome to C#!");
+Console.WriteLine("Until the world...");
+Console.WriteLine(24.5);
+
+string name = "Tom";
+int age = 34;
+double height = 1.7;
+Console.WriteLine(name,age,height);
+
