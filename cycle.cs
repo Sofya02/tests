@@ -38,6 +38,7 @@ class Program
         Console.WriteLine(name);
     }
 
+
     //Bubble Sort
     static void BubbleSort(int[] arr)
     {
@@ -313,6 +314,26 @@ class Program
         {
             int fibonacciNumber = Fibonacci(i);
             Console.Write(fibonacciNumber + " ");
+        }
+
+        //for loop with multiple expressions
+        for (int i=0, j=0; i+j<=5; i++, j++)
+        {
+            Console.WriteLine("i = {0} and j = {1}", i,j);
+        }
+
+        //For loop without declaring counter and iterator
+        int i = 1;
+        for ( ; i<=5; )
+        {
+            Console.WriteLine("For C# loop: iteration {0}", i);
+            i++;
+        }
+
+        //Infinite for loop
+        for (int i=1 ; i > 0; i++)
+        {
+            Console.WriteLine("For C# loop: iteration {0}", i);
         }
     }
 }
