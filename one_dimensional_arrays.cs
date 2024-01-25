@@ -4,12 +4,84 @@ using System;
 
 class Program
 {
+    struct BOOK
+    {
+        public string title; // book title
+        public string author; // name of the author of the book
+        public int year; // the year of publishing
+        public float price; // price
+    }
+
+    // class that describes a point on the coordinate plane
+    class MyPoint
+    {
+        // point coordinates
+        int x;
+        int y;
+
+        // properties
+        public int X
+        {
+            get { return x; }
+            set { x = value; }
+        }
+
+        public int Y
+        {
+            get { return y; }
+            set { y = value; }
+        }
+    }
+
     public static void WorkWithArray(int[] arr)
     {        
         arr[0] = 123;
     }
     static void Main()
     {
+        // declaration and use of a one-dimensional array of structures
+        BOOK[] B; // declaration of a variable of type "array of BOOK structures"
+        B = new BOOK[5]; // allocate memory for 5 structures of type BOOK
+
+        // filling array B with values
+        B[0].title = "Beginning. Microsoft. Visual C# 2008.";
+        B[0].author = "Karli Watson, Christian Nagel, Jacob Hammer Pedersen, Jon D. Reid";
+        B[0].year = 2008;
+        B[0].price = 9.99f;
+
+        B[1].title = "Pro C# 2010 and the .Net Planform. Fifth edition";
+        B[1].author = "Andrew Troelsen";
+        B[1].year = 2010;
+        B[1].price = 9.99f;
+
+
+        // declaration of an array of 5 objects of type class "MyPoint"
+        // allocate memory for the array
+        MyPoint[] MP = new MyPoint[5];
+
+        // memory allocation for any object is mandatory!
+        for (int i = 0; i < 5; i++)
+            MP[i] = new MyPoint();
+
+        // use an array of objects in the program
+        // filling the array with arbitrary values
+        for (int i = 0; i < 5; i++)
+        {
+            MP[i].X = i * 3;
+            MP[i].Y = i * i - 2;
+        }
+
+
+        // Declare and initialize an array of objects
+        object[] arrByObject = { true, 10, "Hello", 13.7m };
+
+        // Print the type of each array member to the console
+        foreach (object me in arrByObject)
+            Console.WriteLine("Type {0} - {1}",me,me.GetType());
+
+        Console.ReadLine();
+
+
         // Create a one-dimensional array
         int[] numbers = new int[5] { 1, 2, 3, 4, 5 };
 
